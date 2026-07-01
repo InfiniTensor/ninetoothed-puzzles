@@ -406,6 +406,29 @@ print(reference)
 assert torch.allclose(y, reference, atol=1e-5)
 
 # %% [markdown]
+# ## 游戏化入口
+#
+# 如果你更喜欢像闯关一样学习，可以直接启动双语课程游戏：
+#
+# ```shell
+# python puzzle_runner.py --lang zh
+# ```
+#
+# 课程会保存进度。前面的关卡会先讲解符号张量、`eval`、`tile`、`expand`、程序网格和应用函数，再让你做小练习；最后几关会在 `solutions/` 下生成解题文件，让你真正补全 CUDA kernel，再由判题器验证。
+#
+# 在有浏览器环境时，也可以启动可选 UI：
+#
+# ```shell
+# python -m streamlit run ui/app.py
+# ```
+#
+# 如果只是想验证环境，可以运行：
+#
+# ```shell
+# python puzzle_runner.py check --all --skip-cuda
+# ```
+
+# %% [markdown]
 # ## 致谢
 #
 # 本项目受到了 [Triton-Puzzles](https://github.com/srush/Triton-Puzzles) 的启发。
